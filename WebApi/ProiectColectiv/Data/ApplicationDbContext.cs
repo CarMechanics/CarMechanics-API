@@ -14,6 +14,7 @@ namespace ProiectColectiv.Data
         public DbSet<Worker> Workers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer("Server=localhost,1433;Database=ProiectColectiv;User Id=sa;Password=ProgramatorLife1623!.;TrustServerCertificate=true;");
+       => options.UseSqlServer("Server=localhost;Database=ProiectColectiv;User Id=SA;Password=MyPassword123#;Encrypt=False");
+
     }
 }

@@ -1,0 +1,51 @@
+﻿<Properties StartupConfiguration="{7FFF22F1-A8C3-4412-9D4C-F211838A6710}|Default">
+  <MonoDevelop.Ide.ItemProperties.ProiectColectiv PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProiectColectiv/Controllers/UserController.cs">
+    <Files>
+      <File FileName="ProiectColectiv/Controllers/WeatherForecastController.cs" Line="31" Column="10" />
+      <File FileName="ProiectColectiv/Migrations/20231113185326_firstMigration.cs" Line="76" Column="38" />
+      <File FileName="ProiectColectiv/Data/User.cs" Line="23" Column="14" />
+      <File FileName="ProiectColectiv/WeatherForecast.cs" Line="1" Column="1" />
+      <File FileName="ProiectColectiv/Program.cs" Line="25" Column="1" />
+      <File FileName="ProiectColectiv/Data/ApplicationDbContext.cs" Line="17" Column="83" />
+      <File FileName="ProiectColectiv/Data/Appointment.cs" Line="13" Column="2" />
+      <File FileName="ProiectColectiv/Controllers/UserController.cs" Line="20" Column="37" />
+      <File FileName="ProiectColectiv/Migrations/ApplicationDbContextModelSnapshot.cs" Line="100" Column="32" />
+      <File FileName="ProiectColectiv/appsettings.json" Line="10" Column="1" />
+      <File FileName="ProiectColectiv/Properties/launchSettings.json" Line="6" Column="20" />
+      <File FileName="ProiectColectiv/appsettings.Development.json" Line="14" Column="1" />
+      <File FileName="ProiectColectiv/Data/Worker.cs" Line="17" Column="2" />
+      <File FileName="ProiectColectiv/Data/AutoPart.cs" Line="8" Column="2" />
+      <File FileName="ProiectColectiv/Data/Bill.cs" Line="11" Column="2" />
+      <File FileName="ProiectColectiv/Data/Car.cs" Line="17" Column="2" />
+      <File FileName="ProiectColectiv/Data/EntityBase.cs" Line="8" Column="19" />
+      <File FileName="ProiectColectiv/Data/Labour.cs" Line="10" Column="2" />
+      <File FileName="ProiectColectiv/Data/Shop.cs" Line="9" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProiectColectiv">
+            <Node name="ProiectColectiv">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="UserController.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

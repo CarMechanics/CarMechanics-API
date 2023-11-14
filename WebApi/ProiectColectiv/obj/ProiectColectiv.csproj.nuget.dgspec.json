@@ -1,33 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paul.marcus\\Desktop\\ProiectColectivFinal\\ProiectColectiv\\ProiectColectiv\\ProiectColectiv.csproj": {}
+    "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paul.marcus\\Desktop\\ProiectColectivFinal\\ProiectColectiv\\ProiectColectiv\\ProiectColectiv.csproj": {
+    "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paul.marcus\\Desktop\\ProiectColectivFinal\\ProiectColectiv\\ProiectColectiv\\ProiectColectiv.csproj",
+        "projectUniqueName": "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj",
         "projectName": "ProiectColectiv",
-        "projectPath": "C:\\Users\\paul.marcus\\Desktop\\ProiectColectivFinal\\ProiectColectiv\\ProiectColectiv\\ProiectColectiv.csproj",
-        "packagesPath": "C:\\Users\\paul.marcus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paul.marcus\\Desktop\\ProiectColectivFinal\\ProiectColectiv\\ProiectColectiv\\obj\\",
+        "projectPath": "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj",
+        "packagesPath": "/Users/marianmutu/.nuget/packages/",
+        "outputPath": "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\paul.marcus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/marianmutu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.307/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -46,6 +39,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.13, )"
@@ -59,6 +60,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -84,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
         }
       }
     }
