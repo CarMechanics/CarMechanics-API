@@ -13,6 +13,14 @@ namespace ProiectColectiv.Data
         public DbSet<Shop> Shops { get; set; }
         public DbSet<Worker> Workers { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Credential)
+                .WithOne()
+                .HasForeignKey<Credential>(c => c.Id);
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlServer("Data Source = BIA-PC\\SQLEXPRESS; Initial Catalog = ProiectColectiv; TrustServerCertificate=True;Integrated Security = True");
     }
