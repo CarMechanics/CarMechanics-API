@@ -3215,19 +3215,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "/Users/marianmutu/Documents/CarMechanics-PC/Bianca/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj",
       "projectName": "ProiectColectiv",
       "projectPath": "/Users/marianmutu/Documents/CarMechanics-PC/Bianca/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj",
       "packagesPath": "/Users/marianmutu/.nuget/packages/",
       "outputPath": "/Users/marianmutu/Documents/CarMechanics-PC/Bianca/CarMechanics-API/WebApi/ProiectColectiv/obj/",
-=======
-      "projectUniqueName": "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj",
-      "projectName": "ProiectColectiv",
-      "projectPath": "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj",
-      "packagesPath": "/Users/marianmutu/.nuget/packages/",
-      "outputPath": "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/obj/",
->>>>>>> origin/UserController
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/marianmutu/.nuget/NuGet/NuGet.Config"
@@ -3308,5 +3300,13 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/marianmutu/Documents/CarMechanics-PC/Bianca/CarMechanics-API/WebApi/ProiectColectiv/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

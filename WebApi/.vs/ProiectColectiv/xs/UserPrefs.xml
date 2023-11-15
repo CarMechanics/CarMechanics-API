@@ -1,83 +1,37 @@
 ﻿<Properties StartupConfiguration="{7FFF22F1-A8C3-4412-9D4C-F211838A6710}|Default">
-<<<<<<< HEAD
-  <MonoDevelop.Ide.ItemProperties.ProiectColectiv PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProiectColectiv/Services/CarService.cs">
-    <Files>
-      <File FileName="ProiectColectiv/Services/CarService.cs" Line="19" Column="8" />
-      <File FileName="ProiectColectiv/Services/UserService.cs" Line="3" Column="1" />
-      <File FileName="ProiectColectiv/Controllers/UserController.cs" Line="14" Column="42" />
-      <File FileName="ProiectColectiv/AppDbContext/IRepository.cs" Line="1" Column="1" />
-      <File FileName="ProiectColectiv/AppDbContext/UserRepository.cs" Line="1" Column="1" />
-      <File FileName="ProiectColectiv/AppDbContext/CarRepository.cs" Line="29" Column="38" />
-      <File FileName="ProiectColectiv/Program.cs" Line="1" Column="1" />
-      <File FileName="ProiectColectiv/Data/ApplicationDbContext.cs" Line="37" Column="1" />
-=======
-  <MonoDevelop.Ide.ItemProperties.ProiectColectiv PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ProiectColectiv/Controllers/UserController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProiectColectiv/Program.cs">
     <Files>
-      <File FileName="ProiectColectiv/Controllers/WeatherForecastController.cs" Line="31" Column="10" />
-      <File FileName="ProiectColectiv/Migrations/20231113185326_firstMigration.cs" Line="76" Column="38" />
-      <File FileName="ProiectColectiv/Data/User.cs" Line="23" Column="14" />
-      <File FileName="ProiectColectiv/WeatherForecast.cs" Line="1" Column="1" />
-      <File FileName="ProiectColectiv/Program.cs" Line="25" Column="1" />
-      <File FileName="ProiectColectiv/Data/ApplicationDbContext.cs" Line="17" Column="83" />
-      <File FileName="ProiectColectiv/Data/Appointment.cs" Line="13" Column="2" />
-      <File FileName="ProiectColectiv/Controllers/UserController.cs" Line="20" Column="37" />
-      <File FileName="ProiectColectiv/Migrations/ApplicationDbContextModelSnapshot.cs" Line="100" Column="32" />
-      <File FileName="ProiectColectiv/appsettings.json" Line="10" Column="1" />
-      <File FileName="ProiectColectiv/Properties/launchSettings.json" Line="6" Column="20" />
-      <File FileName="ProiectColectiv/appsettings.Development.json" Line="14" Column="1" />
-      <File FileName="ProiectColectiv/Data/Worker.cs" Line="17" Column="2" />
-      <File FileName="ProiectColectiv/Data/AutoPart.cs" Line="8" Column="2" />
-      <File FileName="ProiectColectiv/Data/Bill.cs" Line="11" Column="2" />
-      <File FileName="ProiectColectiv/Data/Car.cs" Line="17" Column="2" />
-      <File FileName="ProiectColectiv/Data/EntityBase.cs" Line="8" Column="19" />
-      <File FileName="ProiectColectiv/Data/Labour.cs" Line="10" Column="2" />
-      <File FileName="ProiectColectiv/Data/Shop.cs" Line="9" Column="2" />
->>>>>>> origin/UserController
+      <File FileName="ProiectColectiv/Services/UserService.cs" />
+      <File FileName="ProiectColectiv/Controllers/UserController.cs" Line="65" Column="1" />
+      <File FileName="ProiectColectiv/AppDbContext/IRepository.cs" />
+      <File FileName="ProiectColectiv/AppDbContext/UserRepository.cs" />
+      <File FileName="ProiectColectiv/Program.cs" Line="16" Column="1" />
+      <File FileName="ProiectColectiv/Data/ApplicationDbContext.cs" />
+      <File FileName="ProiectColectiv/Properties/launchSettings.json" />
+      <File FileName="ProiectColectiv/Data/User.cs" />
+      <File FileName="ProiectColectiv/Services/IUserService.cs" />
+      <File FileName="ProiectColectiv/Data/Worker.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ProiectColectiv">
+          <Node name="ProiectColectiv" expanded="True">
             <Node name="ProiectColectiv">
-<<<<<<< HEAD
               <Node name="Controllers" expanded="True" />
-              <Node name="Services">
-                <Node name="CarService.cs" selected="True" />
-              </Node>
-=======
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True">
-                <Node name="UserController.cs" selected="True" />
-              </Node>
-              <Node name="Properties" expanded="True" />
-              <Node name="appsettings.json" expanded="True" />
->>>>>>> origin/UserController
+              <Node name="Data" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-<<<<<<< HEAD
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-=======
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
->>>>>>> origin/UserController
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ProiectColectiv PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

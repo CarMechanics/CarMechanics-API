@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "/Users/marianmutu/Documents/CarMechanics-PC/Bianca/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "/Users/marianmutu/Documents/CarMechanics-PC/Bianca/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj",
         "packagesPath": "/Users/marianmutu/.nuget/packages/",
         "outputPath": "/Users/marianmutu/Documents/CarMechanics-PC/Bianca/CarMechanics-API/WebApi/ProiectColectiv/obj/",
-=======
-    "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj": {}
-  },
-  "projects": {
-    "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj",
-        "projectName": "ProiectColectiv",
-        "projectPath": "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/ProiectColectiv.csproj",
-        "packagesPath": "/Users/marianmutu/.nuget/packages/",
-        "outputPath": "/Users/marianmutu/Documents/CarMechanics-PC/CarMechanics-API/WebApi/ProiectColectiv/obj/",
->>>>>>> origin/UserController
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/marianmutu/.nuget/NuGet/NuGet.Config"
