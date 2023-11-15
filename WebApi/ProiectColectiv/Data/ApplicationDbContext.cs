@@ -32,5 +32,9 @@ namespace ProiectColectiv.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
        => options.UseSqlServer("Server=localhost;Database=ProiectColectiv;User Id=SA;Password=MyPassword123#;Encrypt=False");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/UserController
     }
 }
