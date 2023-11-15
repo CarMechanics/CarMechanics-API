@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{7FFF22F1-A8C3-4412-9D4C-F211838A6710}|Default">
+  <MonoDevelop.Ide.ItemProperties.ProiectColectiv PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProiectColectiv/Services/CarService.cs">
+    <Files>
+      <File FileName="ProiectColectiv/Services/CarService.cs" Line="19" Column="8" />
+      <File FileName="ProiectColectiv/Services/UserService.cs" Line="3" Column="1" />
+      <File FileName="ProiectColectiv/Controllers/UserController.cs" Line="14" Column="42" />
+      <File FileName="ProiectColectiv/AppDbContext/IRepository.cs" Line="1" Column="1" />
+      <File FileName="ProiectColectiv/AppDbContext/UserRepository.cs" Line="1" Column="1" />
+      <File FileName="ProiectColectiv/AppDbContext/CarRepository.cs" Line="29" Column="38" />
+      <File FileName="ProiectColectiv/Program.cs" Line="1" Column="1" />
+      <File FileName="ProiectColectiv/Data/ApplicationDbContext.cs" Line="37" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProiectColectiv">
+            <Node name="ProiectColectiv">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Services">
+                <Node name="CarService.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
