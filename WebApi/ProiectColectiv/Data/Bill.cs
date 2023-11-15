@@ -1,7 +1,11 @@
-﻿namespace ProiectColectiv.Data
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProiectColectiv.Data
 {
     public class Bill : EntityBase
     {
+        [Key]
+        public int Id { get; set; }
         public Guid UserId { get; set; }
         public Guid CarId { get; set; }
         public string Description { get; set; }
