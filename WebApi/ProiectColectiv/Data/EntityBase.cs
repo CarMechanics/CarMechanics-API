@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProiectColectiv.Data
 {
-    public abstract class EntityBase
+    public abstract class EntityBase :IdentityUser
     {
-        [Key]
-        public Guid Id { get; set; }
+     /*   [Key]
+        public Guid Id { get; set; }*/
     }
 }

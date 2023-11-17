@@ -1,4 +1,4 @@
-﻿namespace ProiectColectiv.Data
+﻿/*namespace ProiectColectiv.Data
 {
     public class User : EntityBase
     {
@@ -23,4 +23,4 @@
         public decimal Grade { get; set; }
         public string? Description { get; set; }
     }
-}
+}*/
