@@ -3,7 +3,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+
+using ProiectColectiv.AppDbContext;
 using ProiectColectiv.Data;
+using ProiectColectiv.Data.Repositories;
+using ProiectColectiv.Services;
+
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -83,6 +88,9 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(o =>
 })
      .AddEntityFrameworkStores<ApplicationDbContext>()
      .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<IRepository<Car>, CarRepository>();
+builder.Services.AddScoped<ICarService, CarService>();
 
 // Add configuration from appsettings.json
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)

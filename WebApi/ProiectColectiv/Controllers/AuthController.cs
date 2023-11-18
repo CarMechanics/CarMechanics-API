@@ -14,11 +14,13 @@ namespace ProiectColectiv.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly ApplicationDbContext _dbContext;
 
-        public AuthController(UserManager<ApplicationUser> userManager, IConfiguration configuration)
+        public AuthController(UserManager<ApplicationUser> userManager, IConfiguration configuration, ApplicationDbContext context)
         {
             _userManager = userManager;
             _configuration = configuration;
+            _dbContext = context;
         }
 
         [HttpPost("Register")]
@@ -46,7 +48,7 @@ namespace ProiectColectiv.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
-            var applicationUser = await _userManager.FindByEmailAsync(loginDto.Email);
+            var applicationUser = _dbContext.Users.FirstOrDefault(x => x.Email == loginDto.Email);
 
             /*if (applicationUser == null)
                 return BadRequest("Invalid username or password");*/

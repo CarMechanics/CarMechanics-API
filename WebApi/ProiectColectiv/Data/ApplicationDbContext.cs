@@ -25,7 +25,8 @@ namespace ProiectColectiv.Data
             base.OnModelCreating(builder);
            
         }
-        /*protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlServer("Server=DESKTOP-77BLGL2;Database=ProiectColectiv;TrustServerCertificate=true;");*/
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //=> options.UseSqlServer("Server=localhost,1433;User Id=sa;Password=ProgramatorLife1623!.;Database=ProiectColectiv;TrustServerCertificate=true;");
     }
 }
