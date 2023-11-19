@@ -22,30 +22,30 @@ public class CarService : ICarService
         return _carRepository.GetAll();
     }
 
-    public void AddCar(Car car)
+    public void AddCar(CarPostDTO car)
     {
         _carRepository.Add(car);
     }
 
-    public void UpdateCar(Car car)
+    public void UpdateCar(CarPostDTO car, int carId)
     {
-        var existingCar = _carRepository.GetById(car.Id);
+        var existingCar = _carRepository.GetById(carId);
 
         if (existingCar == null)
         {
-            throw new ArgumentException($"Car with ID {car.Id} not found.");
+            throw new ArgumentException($"Car with ID {carId} not found.");
         }
 
         var carBrandInfo = new CarBrandInfo
         {
-            Manufacturer = car.BrandInfo.Manufacturer,
-            Model = car.BrandInfo.Model
+            Manufacturer = car.brand,
+            Model = car.model
         };
 
         existingCar.BrandInfo = carBrandInfo;
-        existingCar.YearOfManufacture = car.YearOfManufacture;
-        existingCar.VIN = car.VIN;
-        existingCar.NumberOfKilometers = car.NumberOfKilometers;
+        existingCar.YearOfManufacture = int.Parse(car.year);
+        existingCar.VIN = car.vin;
+        existingCar.NumberOfKilometers = int.Parse(car.kilometers);
 
         _carRepository.Update(existingCar);
     }

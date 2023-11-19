@@ -19,4 +19,14 @@ namespace ProiectColectiv.Data
         public string Manufacturer { get; set; }
         public string Model { get; set; }
     }
+
+    public class CarPostDTO
+    {
+        public string userEmail { get; set; }
+        public string brand { get; set; }
+        public string kilometers { get; set; }
+        public string model { get; set; }
+        public string vin { get; set; }
+        public string year { get; set; }
+    }
 }

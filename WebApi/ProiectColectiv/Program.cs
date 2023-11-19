@@ -9,6 +9,7 @@ using ProiectColectiv.Data;
 using ProiectColectiv.Data.Repositories;
 using ProiectColectiv.Services;
 
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -91,6 +92,12 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(o =>
 
 builder.Services.AddScoped<IRepository<Car>, CarRepository>();
 builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.Configure<IdentityOptions>(options =>
+    options.ClaimsIdentity.UserIdClaimType = ClaimTypes.NameIdentifier);
+
+builder.Services.AddHttpContextAccessor();
 
 // Add configuration from appsettings.json
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
