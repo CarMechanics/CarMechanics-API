@@ -34,7 +34,11 @@ namespace ProiectColectiv.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Car> Get() => _carService.GetAllCars();
+        public IEnumerable<Car> Get(string userEmail)
+        {
+            var cars = _carService.GetAllCars(userEmail);
+            return cars;
+        }
 
         [HttpGet("{carId}")]
         public Car GetCarById(int carId)

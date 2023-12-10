@@ -34,7 +34,7 @@ namespace ProiectColectiv.Controllers
                 PhoneNumber = "0",
                 BirthDate= DateTime.UtcNow,
                 EmailConfirmed = true,
-                UserName = userRegistrationDto.Email
+                UserName = "userName1"
             };
 
             var result = await _userManager.CreateAsync(applicationUser, userRegistrationDto.Password);

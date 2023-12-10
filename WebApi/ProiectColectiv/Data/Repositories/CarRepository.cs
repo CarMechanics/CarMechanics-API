@@ -22,9 +22,11 @@ namespace ProiectColectiv.AppDbContext
             return _context.Cars.Include(x => x.BrandInfo).FirstOrDefault(u => u.Id == id);
         }
 
-        public IEnumerable<Car> GetAll()
+        public IEnumerable<Car> GetAll(string userEmail)
         {
-            return _context.Cars.Include(x => x.BrandInfo);
+            var user = _context.Users.FirstOrDefault(x => x.Email == userEmail);
+
+            return _context.Cars.Where(x => x.UserName == user.UserName).Include(x => x.BrandInfo);
         }
 
         public void Add(CarPostDTO car)

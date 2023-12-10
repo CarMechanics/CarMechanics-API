@@ -17,9 +17,9 @@ public class CarService : ICarService
         return _carRepository.GetById(carId);
     }
 
-    public IEnumerable<Car> GetAllCars()
+    public IEnumerable<Car> GetAllCars(string userEmail)
     {
-        return _carRepository.GetAll();
+        return _carRepository.GetAll(userEmail);
     }
 
     public void AddCar(CarPostDTO car)
