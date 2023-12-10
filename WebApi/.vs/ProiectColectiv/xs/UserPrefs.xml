@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{7FFF22F1-A8C3-4412-9D4C-F211838A6710}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProiectColectiv/Data/ApplicationDbContext.cs">
+    <Files>
+      <File FileName="ProiectColectiv/Controllers/UserController.cs" Line="5" Column="1" />
+      <File FileName="ProiectColectiv/Program.cs" Line="14" Column="1" />
+      <File FileName="ProiectColectiv/Data/ApplicationDbContext.cs" Line="19" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProiectColectiv">
+            <Node name="ProiectColectiv">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ProiectColectiv PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+</Properties>
