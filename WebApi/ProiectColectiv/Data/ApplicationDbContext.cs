@@ -26,7 +26,7 @@ namespace ProiectColectiv.Data
            
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder options)
-        //=> options.UseSqlServer("Server=localhost,1433;User Id=sa;Password=ProgramatorLife1623!.;Database=ProiectColectiv;TrustServerCertificate=true;");
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        => options.UseSqlServer("Data Source=DESKTOP-MATD0D3\\SQLEXPRESS;Initial Catalog=ProiectColectiv;TrustServerCertificate=True;Integrated Security=True");
     }
 }
