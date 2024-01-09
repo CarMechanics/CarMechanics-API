@@ -5,9 +5,9 @@ using ProiectColectiv.Services;
 
 public class CarService : ICarService
 {
-    private readonly IRepository<Car> _carRepository;
+    private readonly IRepository<Car, CarPostDTO> _carRepository;
 
-    public CarService(IRepository<Car> carRepository)
+    public CarService(IRepository<Car, CarPostDTO> carRepository)
     {
         _carRepository = carRepository ?? throw new ArgumentNullException(nameof(carRepository));
     }

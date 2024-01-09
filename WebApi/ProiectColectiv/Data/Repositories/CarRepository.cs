@@ -8,7 +8,7 @@ using ProiectColectiv.Data.Repositories;
 
 namespace ProiectColectiv.AppDbContext
 {
-    public class CarRepository : IRepository<Car>
+    public class CarRepository : IRepository<Car, CarPostDTO>
     {
         private readonly ApplicationDbContext _context;
 

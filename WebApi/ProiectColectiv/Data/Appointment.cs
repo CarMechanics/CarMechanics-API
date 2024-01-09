@@ -7,7 +7,7 @@ namespace ProiectColectiv.Data
         [Key]
         public int Id { get; set; }
         public Guid UserId { get; set; }
-        public Guid CarId { get; set; }
+        public string CarId { get; set; }
         public Guid WorkerId { get; set; }
         public Guid BillId { get; set; }
         public DateTime Date { get; set; }

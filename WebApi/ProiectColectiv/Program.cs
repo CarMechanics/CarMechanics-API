@@ -90,8 +90,10 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(o =>
      .AddEntityFrameworkStores<ApplicationDbContext>()
      .AddDefaultTokenProviders();
 
-builder.Services.AddScoped<IRepository<Car>, CarRepository>();
+builder.Services.AddScoped<IRepository<Car, CarPostDTO>, CarRepository>();
+builder.Services.AddScoped<IRepository<Appointment, AppointmentPostDTO>, AppointmentRepository>();
 builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.Configure<IdentityOptions>(options =>
