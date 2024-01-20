@@ -3,18 +3,14 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-
 using ProiectColectiv.AppDbContext;
 using ProiectColectiv.Data;
 using ProiectColectiv.Data.Repositories;
 using ProiectColectiv.Services;
-
 using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -94,6 +90,12 @@ builder.Services.AddScoped<IRepository<Car, CarPostDTO>, CarRepository>();
 builder.Services.AddScoped<IRepository<Appointment, AppointmentPostDTO>, AppointmentRepository>();
 builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IRepository<Review, Review>, ReviewRepository>();
+builder.Services.AddScoped<IRepository<Bill, BillPostDTO>, BillRepository>();
+builder.Services.AddScoped<IBillService, BillService>();
+builder.Services.AddScoped<IRepository<Service, Service>, ServiceRepository>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.Configure<IdentityOptions>(options =>

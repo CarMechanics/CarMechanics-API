@@ -1,5 +1,4 @@
 ﻿using ProiectColectiv.Data;
-using ProiectColectiv.AppDbContext;
 using ProiectColectiv.Data.Repositories;
 
 namespace ProiectColectiv.Services
@@ -45,6 +44,23 @@ namespace ProiectColectiv.Services
         public void DeleteAppointment(int appointmentId)
         {
             _appointmentRepository.Delete(appointmentId);
+            _appointmentRepository.SaveChanges();
+        }
+
+        public bool Check(int carId, string userEmail) => _appointmentRepository.GetAll(userEmail).Any(x => x.CarId == carId.ToString());
+
+        public void DeleteAll(string carId, string userEmail)
+        {
+            var appointments = _appointmentRepository.GetAll(userEmail);
+
+            appointments = appointments.Where(a => a.CarId == carId);
+
+            foreach (var item in appointments)
+            {
+                _appointmentRepository.Delete(item.Id);
+            }
+
+            _appointmentRepository.SaveChanges();
         }
     }
 }

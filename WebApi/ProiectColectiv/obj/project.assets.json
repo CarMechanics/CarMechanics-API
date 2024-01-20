@@ -3320,11 +3320,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paul.marcus\\Desktop\\CarMechanicsWEBAPI-12.10\\CarMechanics-API\\WebApi\\ProiectColectiv\\ProiectColectiv.csproj",
+      "projectUniqueName": "C:\\Users\\paul.marcus\\Desktop\\versiune-finala-starbuck\\CarMechanics-API\\WebApi\\ProiectColectiv\\ProiectColectiv.csproj",
       "projectName": "ProiectColectiv",
-      "projectPath": "C:\\Users\\paul.marcus\\Desktop\\CarMechanicsWEBAPI-12.10\\CarMechanics-API\\WebApi\\ProiectColectiv\\ProiectColectiv.csproj",
+      "projectPath": "C:\\Users\\paul.marcus\\Desktop\\versiune-finala-starbuck\\CarMechanics-API\\WebApi\\ProiectColectiv\\ProiectColectiv.csproj",
       "packagesPath": "C:\\Users\\paul.marcus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paul.marcus\\Desktop\\CarMechanicsWEBAPI-12.10\\CarMechanics-API\\WebApi\\ProiectColectiv\\obj\\",
+      "outputPath": "C:\\Users\\paul.marcus\\Desktop\\versiune-finala-starbuck\\CarMechanics-API\\WebApi\\ProiectColectiv\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

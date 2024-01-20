@@ -26,15 +26,9 @@ namespace ProiectColectiv.Controllers
         [HttpGet]
         public IEnumerable<Appointment> GetAll(string userEmail)
         {
-            var appointments = _appointmentService.GetAllAppointments(userEmail);
-            return appointments;
+            return _appointmentService.GetAllAppointments(userEmail);
         }
 
-        [HttpGet("{appointmentId}")]
-        public Appointment GetAppointmentById(int appointmentId)
-        {
-            return _appointmentService.GetAppointmentById(appointmentId);
-        }
 
         [HttpPut("{appointmentId}")]
         public ActionResult Update([FromBody] AppointmentPostDTO appointment, int appointmentId)
@@ -48,6 +42,17 @@ namespace ProiectColectiv.Controllers
         public ActionResult<Appointment> Delete([FromBody] int appointmentId)
         {
             _appointmentService.DeleteAppointment(appointmentId);
+
+            return NoContent();
+        }
+
+        [HttpGet("{carId}/{userEmail}")]
+        public ActionResult<bool> DoesThisCarHasAppointments(int carId, string userEmail) => _appointmentService.Check(carId, userEmail);
+
+        [HttpDelete("all/{carId}/{userEmail}")]
+        public ActionResult DeleteAll(string carId, string userEmail)
+        {
+            _appointmentService.DeleteAll(carId, userEmail);
 
             return NoContent();
         }

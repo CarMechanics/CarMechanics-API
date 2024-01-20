@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tp6CHU2RFPcRWvdLYJzuvc1QWDUEooS+X01JcdsiwMjKroSr3r+u2PQEqRngBEx7BHPW5wtaKhR0XGVnwna5nQ==",
+  "dgSpecHash": "JebNoK9SRQNbUzTxz3nhsW4QyV8yOggRn15ucRtt7JHLbBtCXjOb3hA7XeA1XI8joEKw68e6zGdyWCy5xL5stA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\paul.marcus\\Desktop\\CarMechanicsWEBAPI-12.10\\CarMechanics-API\\WebApi\\ProiectColectiv\\ProiectColectiv.csproj",
+  "projectFilePath": "C:\\Users\\paul.marcus\\Desktop\\versiune-finala-starbuck\\CarMechanics-API\\WebApi\\ProiectColectiv\\ProiectColectiv.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\paul.marcus\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\paul.marcus\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

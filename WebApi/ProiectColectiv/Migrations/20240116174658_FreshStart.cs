@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ProiectColectiv.Migrations
 {
     /// <inheritdoc />
-    public partial class AddEntities : Migration
+    public partial class FreshStart : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,11 +18,10 @@ namespace ProiectColectiv.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CarId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    WorkerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CarId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ServiceId = table.Column<int>(type: "int", nullable: false),
                     BillId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    NumberOfHours = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -107,9 +106,9 @@ namespace ProiectColectiv.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsAdmin = table.Column<bool>(type: "bit", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IsAdmin = table.Column<bool>(type: "bit", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NormalizedEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -127,6 +126,33 @@ namespace ProiectColectiv.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Credential", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Services",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PriceMultiplier = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NormalizedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NormalizedEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EmailConfirmed = table.Column<bool>(type: "bit", nullable: false),
+                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SecurityStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(type: "bit", nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(type: "bit", nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
+                    LockoutEnabled = table.Column<bool>(type: "bit", nullable: false),
+                    AccessFailedCount = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Services", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -253,7 +279,6 @@ namespace ProiectColectiv.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    LabourId = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     BrandInfoId = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -294,12 +319,12 @@ namespace ProiectColectiv.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CredentialId = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedEmail = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -449,13 +474,16 @@ namespace ProiectColectiv.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Review",
+                name: "Reviews",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Grade = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Grade = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ServiceId = table.Column<int>(type: "int", nullable: false),
                     ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    ServiceId1 = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -473,11 +501,16 @@ namespace ProiectColectiv.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Review", x => x.Id);
+                    table.PrimaryKey("PK_Reviews", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Review_AspNetUsers_ApplicationUserId",
+                        name: "FK_Reviews_AspNetUsers_ApplicationUserId",
                         column: x => x.ApplicationUserId,
                         principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Reviews_Services_ServiceId1",
+                        column: x => x.ServiceId1,
+                        principalTable: "Services",
                         principalColumn: "Id");
                 });
 
@@ -489,7 +522,7 @@ namespace ProiectColectiv.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     WorkerType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ReviewId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    ReviewId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -509,10 +542,11 @@ namespace ProiectColectiv.Migrations
                 {
                     table.PrimaryKey("PK_Workers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Workers_Review_ReviewId",
+                        name: "FK_Workers_Reviews_ReviewId",
                         column: x => x.ReviewId,
-                        principalTable: "Review",
-                        principalColumn: "Id");
+                        principalTable: "Reviews",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -590,9 +624,14 @@ namespace ProiectColectiv.Migrations
                 column: "BrandInfoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Review_ApplicationUserId",
-                table: "Review",
+                name: "IX_Reviews_ApplicationUserId",
+                table: "Reviews",
                 column: "ApplicationUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Reviews_ServiceId1",
+                table: "Reviews",
+                column: "ServiceId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Workers_ReviewId",
@@ -646,13 +685,16 @@ namespace ProiectColectiv.Migrations
                 name: "Appointments");
 
             migrationBuilder.DropTable(
-                name: "Review");
+                name: "Reviews");
 
             migrationBuilder.DropTable(
                 name: "CarBrandInfo");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Services");
 
             migrationBuilder.DropTable(
                 name: "Credential");

@@ -1,7 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 
 namespace ProiectColectiv.Data
 {
@@ -15,15 +13,17 @@ namespace ProiectColectiv.Data
         public DbSet<Labour> Labours { get; set; }
         public DbSet<Shop> Shops { get; set; }
         public DbSet<Worker> Workers { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Service> Services { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
 
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-           
+
         }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder options)

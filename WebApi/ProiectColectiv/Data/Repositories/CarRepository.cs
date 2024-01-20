@@ -1,8 +1,4 @@
-﻿using System.Linq;
-
-using Microsoft.EntityFrameworkCore;
-
-using ProiectColectiv.AppDbContext;
+﻿using Microsoft.EntityFrameworkCore;
 using ProiectColectiv.Data;
 using ProiectColectiv.Data.Repositories;
 
@@ -51,6 +47,11 @@ namespace ProiectColectiv.AppDbContext
                 _context.Cars.Remove(carToRemove);
                 _context.SaveChanges();
             }
+        }
+
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
         }
     }
 }

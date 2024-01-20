@@ -28,6 +28,8 @@ namespace ProiectColectiv.Data.Repositories
             var user = _context.Users.FirstOrDefault(u => u.Email == appointment.userEmail);
             var car = _context.Cars.Include(c => c.BrandInfo).AsNoTracking().FirstOrDefault(c => c.Id.ToString() == appointment.CarId);
             var appointmentToAdd = new Appointment() { UserId = Guid.Parse(user.Id), Date = appointment.Date, Email = appointment.userEmail, CarId = appointment.CarId, Labours = new List<Labour>() { new Labour() { Description = appointment.Description, BrandInfo = new CarBrandInfo() { Manufacturer = car.BrandInfo.Manufacturer, Model = car.BrandInfo.Model } } }, UserName = user.UserName  };
+            var service = _context.Services.FirstOrDefault(x => x.Id == appointment.ServiceId);
+            appointmentToAdd.Labours.ForEach(x => x.CalculatePrice(service.PriceMultiplier));
             _context.Appointments.Add(appointmentToAdd);
             _context.SaveChanges();
         }
@@ -46,8 +48,12 @@ namespace ProiectColectiv.Data.Repositories
                 var labours = appointmentToDelete.Labours;
                 _context.Labours.Remove(labours[0]);
                 _context.Appointments.Remove(appointmentToDelete);
-                _context.SaveChanges();
             }
+        }
+
+        public void SaveChanges()
+        {
+            _context.SaveChanges();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using ProiectColectiv.Data;
-using ProiectColectiv.AppDbContext;
 using ProiectColectiv.Data.Repositories;
-using ProiectColectiv.Services;
+
+namespace ProiectColectiv.Services;
 
 public class CarService : ICarService
 {

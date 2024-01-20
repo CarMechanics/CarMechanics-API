@@ -1,11 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ProiectColectiv.Data
+﻿namespace ProiectColectiv.Data
 {
     public class Worker : EntityBase
     {
-
-       
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string WorkerType { get; set; }

@@ -4,7 +4,7 @@ namespace ProiectColectiv.Data
 {
     public class ApplicationUser : IdentityUser
     {
-      
+
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public DateTime? BirthDate { get; set; }
@@ -23,8 +23,10 @@ namespace ProiectColectiv.Data
 
     public class Review : EntityBase
     {
+        public string UserId { get; set; }
         public decimal? Grade { get; set; }
         public string? Description { get; set; }
+        public int ServiceId { get; set; }
     }
 }
 

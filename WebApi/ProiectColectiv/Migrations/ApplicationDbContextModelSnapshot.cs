@@ -276,9 +276,6 @@ namespace ProiectColectiv.Migrations
                     b.Property<string>("NormalizedUserName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("NumberOfHours")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
@@ -291,6 +288,9 @@ namespace ProiectColectiv.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
@@ -299,9 +299,6 @@ namespace ProiectColectiv.Migrations
 
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("WorkerId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -683,9 +680,6 @@ namespace ProiectColectiv.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<int>("LabourId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -778,8 +772,15 @@ namespace ProiectColectiv.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
@@ -788,7 +789,71 @@ namespace ProiectColectiv.Migrations
 
                     b.HasIndex("ApplicationUserId");
 
-                    b.ToTable("Review");
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("Reviews");
+                });
+
+            modelBuilder.Entity("ProiectColectiv.Data.Service", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("PriceMultiplier")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("ProiectColectiv.Data.Shop", b =>
@@ -902,6 +967,7 @@ namespace ProiectColectiv.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ReviewId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("SecurityStamp")
@@ -1045,13 +1111,21 @@ namespace ProiectColectiv.Migrations
                     b.HasOne("ProiectColectiv.Data.ApplicationUser", null)
                         .WithMany("Review")
                         .HasForeignKey("ApplicationUserId");
+
+                    b.HasOne("ProiectColectiv.Data.Service", null)
+                        .WithMany("Reviews")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ProiectColectiv.Data.Worker", b =>
                 {
                     b.HasOne("ProiectColectiv.Data.Review", "Review")
                         .WithMany()
-                        .HasForeignKey("ReviewId");
+                        .HasForeignKey("ReviewId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Review");
                 });
@@ -1069,6 +1143,11 @@ namespace ProiectColectiv.Migrations
             modelBuilder.Entity("ProiectColectiv.Data.AutoPart", b =>
                 {
                     b.Navigation("AutoPartShops");
+                });
+
+            modelBuilder.Entity("ProiectColectiv.Data.Service", b =>
+                {
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("ProiectColectiv.Data.Shop", b =>

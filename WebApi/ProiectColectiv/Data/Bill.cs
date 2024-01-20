@@ -12,4 +12,13 @@ namespace ProiectColectiv.Data
         public DateTime DateOfIssue { get; set; }
         public decimal BillAmount { get; set; }
     }
+
+    public class BillPostDTO
+    {
+        public string userEmail { get; set; }
+        public string carId { get; set; }
+        public string Description { get; set; }
+        public DateTime DateOfIssue { get; set; }
+        public decimal BillAmount { get; set; }
+    }
 }
